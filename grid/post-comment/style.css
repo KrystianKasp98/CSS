@@ -1,0 +1,89 @@
+/* grid generator https://cssgrid-generator.netlify.app/ */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+:root{
+  /* dimensions */
+  --container-width: 500px;
+  --container-height: 350px;
+  --circle-image-size: 64px;
+  /* colors */
+  --circle-image-color: rgb(189, 189, 189);
+  --container-bg-color: rgb(240, 234, 235);
+
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: grey;
+  font-family: 'Lato', sans-serif;
+}
+.comment-container {
+  display: grid;
+  grid-template-columns: 0.3fr 0.5fr repeat(2, 1fr) 0.3fr;
+  grid-template-rows: 0.1fr 0.45fr 0.7fr 0.1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+
+  background-color: var(--container-bg-color);
+  width: var(--container-width);
+  height: var(--container-height);
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+  border-radius: 15px;
+  box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+}
+
+.image { 
+  grid-area: 2 / 2 / 3 / 3;
+  /* background-color: red; */
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle-image{
+  width: var(--circle-image-size);
+  height: var(--circle-image-size);
+  background-color: var(--circle-image-color);
+  border-radius: 50%;
+}
+
+.author-data{
+  grid-area: 2 / 3 / 3 / 4;
+  /* background-color: brown; */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2px 0;
+  
+  padding-left: 15px;
+}
+
+.author-name{
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.message {
+  grid-area: 3 / 2 / 4 / 5;
+  padding: 0 25px;
+  /* background-color: green; */
+  text-align: justify;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.additional-info {
+   grid-area: 6 / 2 / 7 / 5;
+   background-color: blue; 
+}
+
