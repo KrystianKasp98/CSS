@@ -42,6 +42,37 @@ body{
   grid-area: 4 / 3 / 5 / 4;
 }
 
+.login-form__input{
+  width: 95%;
+  background-color: transparent;
+}
+
+.login-form__input:focus{
+  border-color: red;
+  outline-color: red;
+  color: red;
+}
+
+.login-form__input--login{
+  color: blue;
+  border-color: blue;
+  outline-color: blue;
+}
+
+.login-form__input--password{
+  font-size: 1.1em;
+}
+
 .login-form__wrapper-button{
   grid-area: 6 / 3 / 7 / 4;
+}
+
+.login-form__button{
+  background-color: transparent;
+  padding: 5px 15px;
+  transition: box-shadow .5s;
+}
+
+.login-form__button:hover{
+  box-shadow: inset 0px 0px 100px -9px rgba(14, 32, 255, 1);
 }
