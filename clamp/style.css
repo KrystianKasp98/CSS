@@ -1,0 +1,25 @@
+:root{
+  --bg-color: grey;
+
+  --box-color: red;
+  --box-width: clamp(300px, 60vw,900px);
+  --box-ratio: 16/9;
+
+  --tcut-width: clamp(70px,10vw,400px);
+}
+
+body{
+  background-color: var(--bg-color);
+}
+.box{
+  /* clam is just width-min, width, width-max but just in one line, as second argument you need a relative dimension, arguments above are boundaries */
+  width: var(--box-width);
+  aspect-ratio: var(--box-ratio);
+  background-color: var(--box-color);
+}
+.text-cut{
+  width: var(--tcut-width);
+  height: 20px;
+  overflow: hidden;
+}
+
